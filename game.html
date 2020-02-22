@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <script src="p5.min.js"></script>
+  </head>
+  <body>
+    <script>
+      var w = window.innerWidth;
+      var h = window.innerHeight;
+      playerX= w/2;
+      playerY= h/2;
+      
+      function setup(){
+        createCanvas(w,h);
+      }
+      
+      function draw(){
+        clear();
+        // create player
+        
+        rect(playerX,playerY,50,50);
+        //color player red
+        
+        fill("red");
+        // move the player up when the W key is held down
+        
+        if(keyIsDown(87)){
+          playerY-=5;
+          
+        }
+        // move the player down when the S is held down
+        else if(keyIsDown(83)){
+          playerY+=5;
+        }
+        // move the player left when the A key is held down
+        
+        else if(keyIsDown(65)){
+          playerX-=5;
+        }
+        // move the player right when the D key is held down
+        else if(keyIsDown(68)){
+          playerX+=5;
+        }
+      }
+      
+     
+   
+   
+   
+   
+   
+   
+   
+   
+    </script>
+  </body>
+</html>
