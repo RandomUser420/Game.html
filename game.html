@@ -14,15 +14,18 @@
       }
       
       function draw(){
+        
         clear();
         // create player
         
+        playerY=constrain(playerY,window.screenTop,window.innerHeight)
+        playerX= constrain(playerX, window.screenLeft, window.innerWidth)
         rect(playerX,playerY,50,50);
         //color player red
         
         fill("red");
         // move the player up when the W key is held down
-        
+     
         if(keyIsDown(87)){
           playerY-=5;
           
@@ -40,6 +43,7 @@
         else if(keyIsDown(68)){
           playerX+=5;
         }
+
       }
       
      
