@@ -18,8 +18,8 @@
         clear();
         // create player
         
-        playerY=constrain(playerY,window.screenTop,window.innerHeight)
-        playerX= constrain(playerX, window.screenLeft, window.innerWidth)
+       //playerY=constrain(playerY,window.screenTop,window.innerHeight-40)
+       //playerX= constrain(playerX, window.screenLeft, window.innerWidth-50)
         rect(playerX,playerY,50,50);
         //color player red
         
@@ -43,7 +43,22 @@
         else if(keyIsDown(68)){
           playerX+=5;
         }
+        
+        if(playerY<0){
+          playerY=0
+        }
+         if(playerY>h-45){
+          playerY=h-45
+       }
+       if(playerX>w-45){
+        playerX=w-45
 
+      }
+      if(playerX<0){
+       playerX=0
+
+       }
+      
       }
       
      
